@@ -1,25 +1,37 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import NewsCard from "../News-card/NewsCard";
 import axios  from "axios";
  const NewsContainer=()=>{
 
+const [items,setItems]= useState([]);
+
+
     useEffect(()=>{
     async function fetchData(){
         try{
-             const response = await axios.get('https://news67.p.rapidapi.com/v2/topic-search');
-             const data = response.data;
+             const response = await axios.get('https://newsapi.org/v2/everything?q=keyword&apiKey=8a4f493837be4924b72307cb5ca09e67');
+             const data = [response.data];
+         
+             setItems(data);
         }
         catch(err){
              console.log("error",err);
              alert("Some error occured")
         }};
-         fetchData(),[]
+         fetchData()
        
-   })
+   },[])
 
     return(
-        <div className="Card-container">
-        <NewsCard />
+       
+        <div className="card-container">
+          
+          {items.map(item=>{
+           
+
+  return (<NewsCard data={item}/>)})
+}
+
         </div>
     )
 }

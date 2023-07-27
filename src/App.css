@@ -1,5 +1,6 @@
 @import url('./components/Navbar/Navbar.css');
 @import url('./components/News-card/NewsCard.css');
+@import url('./components/News-container/NewsContainer.css');
 .App {
   text-align: center;
 }
@@ -8,12 +9,7 @@
   height: 40vmin;
   pointer-events: none;
 }
-.Card-container{
-  display: grid;
- grid-template-columns: auto;
-  margin:1.5rem;
-  background-color: black;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

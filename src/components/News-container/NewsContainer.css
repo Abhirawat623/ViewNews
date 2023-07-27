@@ -1,0 +1,6 @@
+.card-container{
+    display: grid;
+   grid-template-columns: auto;
+    margin:1.5rem;
+   
+  }

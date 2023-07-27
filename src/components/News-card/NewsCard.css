@@ -3,8 +3,8 @@
     flex-direction: column;
   padding: 5px;
     box-shadow: 2px 3px 5px gray;
-    height: 14rem;
-    width: 18rem;
+    height:100%;
+    width: 36%;
 }
 .card-image-container{
     width: 100%;
