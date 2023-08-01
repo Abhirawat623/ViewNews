@@ -8,13 +8,18 @@
 
 
 .card{
-    padding: 5px;
+   
     box-shadow: 2px 3px 5px gray;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+      
 }
 .card-image-container{
-    width: 58vh;
-    height: 50vh;
+    height: 100%;
+    width: 100%;
+  margin-top: 0;
 }
 
 .card-image{
@@ -49,8 +54,8 @@
 }
 .author{
     position: absolute;
-    right:7px;
-    top:18rem;
+    right:1px;
+    top:2px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     border: 1px solid black;
