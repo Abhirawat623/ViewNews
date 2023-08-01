@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import NewsContainer from "./components/News-container/NewsContainer";
 import React from "react";
+
 import {BrowserRouter as Router,
 Routes,
 Route} from "react-router-dom";
