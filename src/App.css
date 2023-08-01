@@ -1,5 +1,6 @@
 @import url('./components/Navbar/Navbar.css');
 @import url('./components/News-card/NewsCard.css');
+@import url('./pages/home/Home.css');
 
  :root{
 --text-color1: rgb(0, 0, 0);

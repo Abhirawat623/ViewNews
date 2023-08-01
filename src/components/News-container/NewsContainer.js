@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
 import NewsCard from "../News-card/NewsCard";
 import axios  from "axios";
- const NewsContainer=()=>{
+
+
+ const NewsContainer=({cat})=>{
 
 const [news,setNews]= useState([]);
 
@@ -9,7 +11,9 @@ const [news,setNews]= useState([]);
     useEffect(()=>{
     async function fetchData(){
         try{
-             const response = await axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=8a4f493837be4924b72307cb5ca09e67');
+             const response = await axios.get(
+               cat ? `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=a211e3b43c3b42208a9123eb13cdfb33` :
+               "https://newsapi.org/v2/top-headlines?country=in&apiKey=a211e3b43c3b42208a9123eb13cdfb33");
              const data = response.data.articles
              const transformedData = data.map( (item,index)=>{
                return{
@@ -25,7 +29,7 @@ const [news,setNews]= useState([]);
         }};
          fetchData()
        
-   },[])
+   },[cat])
 
   
     
