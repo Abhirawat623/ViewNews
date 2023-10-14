@@ -1,7 +1,7 @@
 
 
 const NewsCard = ({props})=>{
-console.log(props)
+
  
 
  
